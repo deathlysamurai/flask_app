@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Notes{% endblock %}
+
+{% block content %}
+    <h1 align="center">Notes</h1>
+    <ul class="list-group list-group-flush" id="notes">
+        {% for note in user.notes %}
+        <li class="content list-group-item" style="border-radius: 5px; margin-bottom: 10px;">
+            <div class="media">
+                <img class="rounded-circle note-img" src="{{ url_for('static', filename='images/' + current_user.image_file) }}">
+                <div class="media-body overflow">
+                    <div class="title-underline">
+                        <h4 class="mr-2" style="display: inline;">{{ note.date.strftime('%I:%M%p') }}</h4>
+                        <small>{{ note.date.strftime('%m/%d/%Y') }}</small>
+                    </div>
+                        {{ note.data }}
+                </div>
+                <button style="color: white" type="button" class="close" onClick="deleteNote({{ note.id }})">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    <form method="POST">
+        <textarea name="note" id="note" class="content form-control"></textarea>
+        <br>
+        <div align="center">
+            <button type="submit" class="btn btn-primary">Add Note</button>
+        </div>
+    </form>
+{% endblock %}
