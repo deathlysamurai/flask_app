@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Account{% endblock %}
+
+{% block content %}
+    <div class="content-background">
+        <div class="media">
+            <img class="rounded-circle account-img" src="{{ image_file }}">
+            <div class="media-body">
+                <h2 class="account-heading">{{ current_user.username }}</h2>
+                <p>{{ current_user.email }}</p>
+            </div>
+        </div>
+        <form method="POST" action="" enctype="multipart/form-data">
+            <h3 align="center">Update Account Info</h3>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control dark" id="username" name="username"
+                placeholder="{{ current_user.username }}">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control dark" id="email" name="email" 
+                placeholder="{{ current_user.email }}">
+            </div>
+            <div class="form-group">
+                <label for="picture">Profile Picture</label>
+                <input type="file" class="form-control-file dark" id="picture" name="picture"
+                placeholder="Upload Profile Picture">
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+{% endblock %}

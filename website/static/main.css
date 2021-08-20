@@ -1,0 +1,76 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.content {
+    background-color: #1A1A1B;
+    color: white;
+}
+
+.dark {
+    background-color: #1A1A1B;
+    color: #FFFFFF;
+}
+
+.navbar-toggler {
+    border-color: rgba(0, 123, 255);
+}
+
+.navbar-toggler-icon {
+    background-image:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 123, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E")
+}
+
+.account-link {
+    color: white;
+    border-top: 2px solid white;
+    margin-top: 10px;
+}
+
+.message {
+    margin-top: 10px;
+}
+
+.account-img {
+    height: 125px;
+    width: 125px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.account-heading {
+    font-size: 2.5rem;
+}
+
+.content-background {
+    background-color: #272729;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.note-img {
+    height: 75px;
+    width: 75px;
+    margin-right: 20px;
+    margin-bottom: 16px;
+}
+
+.title-underline {
+    padding-bottom: 1px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid #e3e3e3
+  }
+
+.post-title {
+    color: white;
+}
+
+a.post-title:hover {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.overflow {
+    word-break: break-all;
+}
