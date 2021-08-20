@@ -1,0 +1,31 @@
+[data-theme="light"] {
+    background-color: #DAE0E6;
+    color: black;
+  }
+
+[data-theme="light"] .content {
+    background-color: white;
+    color: black;
+}
+
+[data-theme="light"] .dark {
+    background-color: white;
+    color: #000000;
+}
+
+[data-theme="light"] .account-link {
+    color: black;
+    border-top: 2px solid black;
+    margin-top: 10px;
+}
+
+[data-theme="light"] .content-background {
+    background-color: #F6F7F8;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+[data-theme="light"] .post-title {
+    color: black;
+}
