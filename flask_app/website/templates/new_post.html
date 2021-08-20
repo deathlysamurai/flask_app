@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}New Post{% endblock %}
+
+{% block content %}
+    <form method="POST">
+        <h3>{{ legend }}</h3>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control dark" id="title" name="title" 
+            placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="content">Content</label>
+            <input type="text" class="form-control dark" id="content" name="content" 
+            placeholder="">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Post</button>
+    </form>
+{% endblock content %}
