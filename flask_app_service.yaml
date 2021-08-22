@@ -1,0 +1,17 @@
+# Used for Docker and kubernetes
+# Not currently in use
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: flaskapp-svc
+  labels:
+    app: flaskapp
+spec:
+  type: NodePort 
+  ports:
+  - port: 5000
+    targetPort: 5000
+    protocol: TCP
+  selector:
+    app: flaskapp

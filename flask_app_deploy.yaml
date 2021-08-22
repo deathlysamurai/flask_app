@@ -1,0 +1,24 @@
+# Used for Docker and kubernetes
+# Not currently in use
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flaskapp-deploy
+  labels:
+    app: flaskapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: flaskapp
+  template:
+    metadata:
+      labels:
+        app: flaskapp
+    spec:
+      containers:
+      - name: flaskapp
+        image: deathlysamurai/flask_app:0.1
+        ports:
+        - containerPort: 5000
